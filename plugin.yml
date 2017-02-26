@@ -1,0 +1,8 @@
+name: IPUtils
+version: 1.0
+main: net.Farscore.IPUtils.Spigot.Core
+author: Farscore
+commands:
+  iputils:
+  description: Main command for IPUtils
+  usage: /iputils

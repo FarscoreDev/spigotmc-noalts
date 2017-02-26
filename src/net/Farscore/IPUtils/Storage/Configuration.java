@@ -89,6 +89,20 @@ public class Configuration {
 		loadConfigIntoMemory();
 	}
 	
+	public static void addBlacklist(String ip)
+	{
+		if(isSpigot)
+		{
+			net.Farscore.IPUtils.BungeeCord.Core.config.getConfig().set("blacklisted." + ip, true);
+			net.Farscore.IPUtils.Spigot.Core.plugin.saveConfig();
+		}
+		else
+		{
+			net.Farscore.IPUtils.BungeeCord.Core.config.getConfig().set("blacklisted." + ip, true);
+			net.Farscore.IPUtils.BungeeCord.Core.config.saveConfig();
+		}
+	}
+	
 	public static boolean getBooleanFromMemorySilently(String key)
 	{
 		if(configProperties.containsKey(key))

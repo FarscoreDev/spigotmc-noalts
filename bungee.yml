@@ -1,0 +1,4 @@
+name: IPUtils
+main: net.Farscore.IPUtils.BungeeCord.Core
+version: 1.0
+author: Farscore

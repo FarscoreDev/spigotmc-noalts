@@ -21,14 +21,7 @@ public class Lookup {
 			{
 				found++;
 				
-				if(o.getValue()._onlineSince == 0)
-				{
-					output.add("\u00A7a" + o.getValue()._name + "");
-				}
-				else
-				{
-					output.add("\u00A7a" + o.getValue()._name + ": \u00A79" + o.getValue().returnOnline());
-				}
+				output.add("\u00A7a" + o.getValue()._name + "" + (o.getValue()._onlineSince == 0 ? ": \u00A79" + o.getValue().returnOnline() : ""));
 			}
 		}
 		
